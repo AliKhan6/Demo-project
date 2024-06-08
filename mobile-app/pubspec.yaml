@@ -9,34 +9,22 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.1 <3.0.0"
+  sdk: '>=2.19.0 <3.0.0'
 
 # Dependencies 
 dependencies:
   flutter:
     sdk: flutter
   
-  connectivity_plus: ^1.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  device_info: ^2.0.2
   dio: ^4.0.0
-  dio_http_cache:
-    git:
-      url: https://github.com/hurshi/dio-http-cache
   file_picker: ^4.0.0
-
-  # Firebase Plugins
-  firebase_core: ^1.3.0
-  firebase_messaging: ^10.0.6
-  flutter_html: null
   flutter_local_notifications: ^5.0.0
   flutter_rating_bar: ^4.0.0
   flutter_screenutil: ^5.0.0
   flutter_svg: any
-  geocoding:
-  geolocator: ^9.0.0
   get: ^4.1.4
   get_it: ^7.1.3
   google_maps_flutter: ^2.0.6
@@ -47,7 +35,6 @@ dependencies:
   modal_progress_hud_nsn: ^0.1.0-nullsafety-1
   permission_handler: ^10.0.0
   provider: ^5.0.0
-  rename: ^1.3.1
   shared_preferences: ^2.0.5
   url_launcher: ^6.0.7
   path_provider: ^2.0.11

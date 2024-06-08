@@ -5,4 +5,8 @@ export default class UserDao extends BaseDao<UserOutput> {
   constructor() {
     super(User);
   }
+
+
+  //// 
+
 }

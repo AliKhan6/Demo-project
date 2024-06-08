@@ -1,10 +1,8 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 import '../../core/services/auth_service.dart';
 import '../../locator.dart';
-import '../custom_widgets/dailogs/network_error_dialog.dart';
 import 'onboarding/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,16 +27,6 @@ class _SplashScreenState extends State<SplashScreen> {
   _initialSetup() async {
     await Future.delayed(const Duration(seconds: 3));
     // await _localStorateService.init();
-
-    ///
-    /// If not connected to internet, show an alert dialog
-    /// to activate the network connection.
-    ///
-    final connectivityResult = await Connectivity().checkConnectivity();
-    if (connectivityResult == ConnectivityResult.none) {
-      Get.dialog(const NetworkErrorDialog());
-      return;
-    }
 
     ////
     ///initializing notification services

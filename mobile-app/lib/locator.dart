@@ -14,7 +14,6 @@ setupLocator() async {
   // locator.registerSingleton(_instance);
   locator.registerSingleton(LocalStorageService());
 
-  locator.registerSingleton(NotificationsService());
   locator.registerLazySingleton<DatabaseService>(() => DatabaseService());
   locator.registerSingleton<AuthService>(AuthService());
   locator.registerSingleton<ApiServices>(ApiServices());

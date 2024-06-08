@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-
 import '../../locator.dart';
 import '../../ui/custom_widgets/dailogs/auth_dialog.dart';
 import '../models/body/login_body.dart';
@@ -10,9 +9,7 @@ import '../models/other_models/user_profile.dart';
 import '../models/reponses/auth_response.dart';
 import '../models/reponses/user_profile_response.dart';
 import 'database_service.dart';
-import 'device_info_service.dart';
 import 'local_storage_service.dart';
-import 'notification-service.dart';
 
 ///
 /// [AuthService] class contains all authentication related logic with following
@@ -72,12 +69,12 @@ class AuthService {
   /// Updating FCM Token here...
   ///
   _updateFcmToken() async {
-    final fcmToken = await locator<NotificationsService>().getFcmToken();
-    final deviceId = await DeviceInfoService().getDeviceId();
-    final response = await _dbService.updateFcmToken(deviceId, fcmToken!);
-    if (response.success) {
-      userProfile!.fcmToken = fcmToken;
-    }
+    // final fcmToken = await locator<NotificationsService>().getFcmToken();
+    // final deviceId = await DeviceInfoService().getDeviceId();
+    // final response = await _dbService.updateFcmToken(deviceId, fcmToken!);
+    // if (response.success) {
+    //   userProfile!.fcmToken = fcmToken;
+    // }
   }
 
   signupWithEmailAndPassword(SignUpBody body) async {
@@ -125,7 +122,7 @@ class AuthService {
   logout() async {
     isLogin = false;
     userProfile = null;
-    await _dbService.clearFcmToken(await DeviceInfoService().getDeviceId());
+    // await _dbService.clearFcmToken(await DeviceInfoService().getDeviceId());
     _localStorageService.accessToken = null;
   }
 }
