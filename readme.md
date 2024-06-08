@@ -23,8 +23,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/yourrepo.git
-   cd yourrepo/frontend
+   git https://github.com/AliKhan6/Demo-project.git
+   cd Demo-project/mobile-app
 
 2. Install dependencies:
    flutter pub get
