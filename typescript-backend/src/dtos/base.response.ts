@@ -1,4 +1,4 @@
-export interface ApiResponse<> {
+export interface BaseResponse<> {
     success: boolean;
     message?: any;
     data?: any;
