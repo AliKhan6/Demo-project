@@ -1,6 +1,6 @@
 # Demo Project
 
-This project contains both the frontend and backend of an application. The frontend is developed using Flutter, and the backend is developed using TypeScript with Sequelize.
+This project contains both the frontend and backend of an application. The frontend is developed using Flutter, and the backend is developed using TypeScript with Sequelize Postgres.
 
 ## Table of Contents
 
